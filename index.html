@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nugith Disas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: url('background.png') no-repeat center center / cover;
+            padding: 20px;
+        }
+
+        .container {
+            position: relative;
+            min-height: 90vh;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            backdrop-filter: blur(20px);
+            padding: 20px;
+        }
+
+        .navbar {
+            padding: 15px 0;
+            background: transparent !important;
+        }
+
+        .navbar-brand {
+            margin-top: 20px;
+            font-size: 25px;
+            color: #fff !important;
+            font-weight: 600;
+        }
+
+        .nav-link {
+            color: #fff !important;
+            font-size: 18px;
+            font-weight: 500;
+            margin-left: 25px;
+            border-bottom: 2px solid transparent;
+            transition: all 300ms;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            border-bottom: 2px solid #fff;
+        }
+
+        .navbar-toggler {
+            border: 2px solid #fff;
+            padding: 8px;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .home-content {
+            padding-top: 80px;
+            color: #fff;
+        }
+
+        .home-detail h1 {
+            font-size: 70px;
+            line-height: 1.2;
+        }
+
+        .home-detail h1 span {
+            color: #4badf4;
+        }
+
+        .home-detail h2 {
+            font-size: calc(1.2rem + 1vw);
+            margin: 15px 0;
+        }
+
+        .social-icons {
+            margin-left: 20px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            padding: 8px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            margin: 8px;
+            transition: all 300ms;
+        }
+
+        .social-icons a:hover {
+            text-decoration: underline;
+            background: #fff;
+            box-shadow: 0 0 10px #fff;
+            color: #333;
+        }
+
+        .img-box {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 1;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #fff;
+            overflow: hidden;
+            margin: 30px auto;
+        }
+
+        .img-box img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #home, #about, #project, #contact {
+            display: none;
+            color: #fff;
+            padding-top: 80px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#home" >NUGI</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showSection('home', this)">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showSection('about', this)">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showSection('project', this)">Project</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showSection('contact', this)">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row home-content align-items-center " id="home">
+            <div class="col-lg-7 text-center text-lg-start">
+                <div class="home-detail">
+                    <h1>Hi, I'm <span>Nugitha Disas</span></h1>
+                    <h2>Programmer | Web Developer | Designer</h2>
+                    <p>I am a dedicated and passionate software engineering undergraduate student with a foundation in
+                        programming, software development, and database design. I am committed to continuous learning
+                        and solving complex problems through innovative and efficient solutions. With a interest in both
+                        front-end and back-end development, I aim to contribute to impactful projects with technological
+                        advancement.</p>
+
+                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start align-items-center">
+                        <div class="social-icons">
+                            <a href="https://github.com/Nugi29" target="_blank"><i class="ri-github-fill"></i></a>
+                            <a href="https://www.linkedin.com/in/nugitha-disas" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                            <a href="https://www.facebook.com/nugitha.disas" target="_blank"><i class="ri-facebook-fill"></i></a>
+                            <a href="https://wa.me/94703760140" target="_blank"><i class="ri-whatsapp-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 d-flex justify-content-center">
+                <div class="img-box">
+                    <img src="crop nu.jpg" alt="Profile Photo">
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="section-content">
+            <h2>About Me</h2>
+            <p>Your about content goes here...</p>
+        </div>
+
+        <div id="project" class="section-content">
+            <h2>My Projects</h2>
+            <p>Your projects content goes here...</p>
+        </div>
+
+        <div id="contact" class="section-content">
+            <h2>Contact Me</h2>
+            <p>Your contact information goes here...</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showSection(sectionId, clickedLink) {
+            // Hide all sections
+            document.querySelectorAll('#home, #about, #project, #contact').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).style.display = sectionId === 'home' ? 'flex' : 'block';
+            
+            // Update active nav link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            clickedLink.classList.add('active');
+        }
+
+        // Show Home by default and set its nav link as active
+        document.addEventListener('DOMContentLoaded', function() {
+            const homeLink = document.querySelector('.nav-link');
+            showSection('home', homeLink);
+        });
+    </script>
+</body>
+</html>
